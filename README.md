@@ -1,4 +1,4 @@
-#Complete Enrollment Form
+# Complete Enrollment Form
 
 Form sent to a new prospect student to assess the following information:
 
