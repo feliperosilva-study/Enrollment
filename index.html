@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CiberPT - Enrollment</title>
+    <link rel="icon" href="/cyberpt.png" type="png">
 </head>
 <body>
     <h1>CyberPT Technical School</h1>
 
-    <h2>Enrollment Form</h2>
+    <h2>Assessment Form</h2>
 
+    <!--Personal Info Section-->
     <fieldset>
         <legend><h3>Personal Information</h3></legend>
         <label>Full Name:</label><br>
@@ -47,23 +49,43 @@
         <label>E-mail:</label><br>
         <input type="email"><br><br>
     </fieldset>
+
+    <!--Course Section-->
     <fieldset>
         <legend><h3>Courses</h3></legend>
-        <label>Which course(s) do you want to enroll?</label><br>
-        <label><input type="checkbox"> Python</label><br>
-        <label><input type="checkbox"> Java</label><br>
-        <label><input type="checkbox"> Javascript</label><br>
-        <label><input type="checkbox"> C#</label><br>
-        <label><input type="checkbox"> C++</label><br>
-        <label><input type="checkbox"> Go</label><br>
-        <label><input type="checkbox"> Angular</label><br><br>
+        <label>Which programming language would you like to work with?</label><br>
+        <!--Same "name" deselect option when another option is selected-->
+        <label><input type="radio" name="option_lang"> Python</label><br>
+        <label><input type="radio" name="option_lang"> Java</label><br>
+        <label><input type="radio" name="option_lang"> Javascript</label><br>
+        <label><input type="radio" name="option_lang"> C#</label><br>
+        <label><input type="radio" name="option_lang"> C++</label><br>
+        <label><input type="radio" name="option_lang"> Go</label><br>
+        <label><input type="radio" name="option_lang"> Angular</label><br><br>
+
+        <label>What is your level of knowledge in your chosen language? (1=Beginner, 5=Expert)</label><br>
+        <table>
+            <tbody>
+                <tr>
+                    <td><label>1.<input type="radio" name="option_know"></td>
+                    <td><label>2.<input type="radio" name="option_know"></td>
+                    <td><label>3.<input type="radio" name="option_know"></td>
+                    <td><label>4.<input type="radio" name="option_know"></td>
+                    <td><label>5.<input type="radio" name="option_know"></td>
+                </tr>
+            </tbody>
+        </table><br>
+
+        <label>If you have any previous experience, please, describe it here:</label><br>
+        <textarea type="text" maxlength="1000" placeholder="Max. 1000 characters"></textarea><br><br>
 
         <label>Select a learning format:</label><br>
-        <label><input type="radio" name="option"> In-Person</label><br>
-        <label><input type="radio" name="option"> Remote</label><br>
-        <label><input type="radio" name="option"> Any</label><br>
-
+        <label><input type="radio" name="option_format"> In-Person</label><br>
+        <label><input type="radio" name="option_format"> Remote</label><br>
+        <label><input type="radio" name="option_format"> Any</label><br>
     </fieldset>
+
+    <!--Education Level Section-->
     <fieldset>
         <legend><h3>Education</h3></legend>
         <label>Higher Degree Achieved:</label><br>
@@ -89,6 +111,16 @@
             <option>Natural Sciences</option>                       
             <option>Social Sciences</option>
             <option>Other</option>
+        </select>
+    </fieldset>
+
+    <!--Consent Section-->
+    <fieldset>
+        <legend><h3>Consent</h3></legend>
+        <input type="checkbox"> I have read and accepted the <a href="">Terms and Conditions</a>. <br><br>
+
+        <button type="submit">Accept & Send</button>
+
     </fieldset>
 </body>
 </html>
